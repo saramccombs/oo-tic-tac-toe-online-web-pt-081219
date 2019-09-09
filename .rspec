@@ -1,5 +1,8 @@
 --color
 --format documentation
 --require spec_helper
+<<<<<<< HEAD
 --fail-fast
+=======
+>>>>>>> d46b58dda3d7d9132cc8b165a6e4b7109af6f26f
 

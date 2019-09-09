@@ -49,11 +49,16 @@ class TicTacToe
   
   def turn
     puts "Please enter your move. Specify a position between 1-9:"
+<<<<<<< HEAD
     input = gets.strip
+=======
+    input = gets.chomp
+>>>>>>> d46b58dda3d7d9132cc8b165a6e4b7109af6f26f
     index = input_to_index(input)
     if valid_move?(index)
       token = current_player
       move(index, token)
+<<<<<<< HEAD
     else
       turn
     end
@@ -97,6 +102,39 @@ class TicTacToe
     else
       puts "Cat's Game!"
     end
+=======
+      display_board
+    else
+        turn
+    end
+  end
+  
+  def won?
+   
+  end
+  
+  def full?
+    @board.count("X") || @board.count("O")
+  end
+  
+  def draw?
+    if @board.won? == false && @board.full? == true 
+      true 
+    elsif @board.won? == true 
+      false 
+    else 
+      false
+    end
+  end
+  
+  def over?
+    @board.won? == true || @board.full? == true
+  end
+  
+  def winner
+    puts "The winner is: #{winner}"
+    display_board
+>>>>>>> d46b58dda3d7d9132cc8b165a6e4b7109af6f26f
   end
   
 end
